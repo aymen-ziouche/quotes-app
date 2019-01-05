@@ -36,6 +36,22 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  #fonts:
+  #  - family: Gaegu
+  #    fonts:
+  #      - assets: assets/fonts/Gaegu-Light.ttf
+  #          weight: 200
+  #      - assets: assets/fonts/Gaegu-Regular.ttf
+  #          weight: 500
+  #  - family: Tajawal
+  #    fonts:
+  #      - assets: assets/fonts/Tajawal-Medium.ttf
+  #          weight: 300
+  #      - assets: assets/fonts/Tajawal-Light.ttf
+  #          weight: 100
+  #      - assets: assets/fonts/Tajawal-Regular.ttf
+  #          weight: 500
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

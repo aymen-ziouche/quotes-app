@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:mobileapp/Madara_page.dart';
+import 'package:mobileapp/home_page.dart';
+import 'package:mobileapp/Minato_page.dart';
+import 'package:mobileapp/Luffy_page.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(new QuoteApp());
 
-class MyApp extends StatelessWidget {
+class QuoteApp extends StatefulWidget {
+  @override
+  QuoteAppState createState() {
+    return new QuoteAppState();
+  }
+}
+
+class QuoteAppState extends State<QuoteApp> {
+  List<Widget> pages = [HomePage(), MadaraPage(), MinatoPage(), Luffypage(),];
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Motivational Quote App',
-      home: new Scaffold(
-          body: new Stack(
-        children: <Widget>[
-          new Container(
-            decoration: new BoxDecoration(
-              image: new DecorationImage(
-                image: new AssetImage('assets/img/Ace.jpg'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          new Center(
-            child: new Text('Never give up'),
-          )
-        ],
-      )),
+      home: PageView.builder(
+        itemCount: pages.length,
+        itemBuilder: (BuildContext context, int index) => pages[index],
+      ),
     );
   }
 }
